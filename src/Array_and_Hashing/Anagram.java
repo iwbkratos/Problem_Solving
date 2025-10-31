@@ -15,7 +15,13 @@ public class Anagram {
         Input: s = "jar", t = "jam"
         Output: false
     *
-    * Approach : */
+    * Approach : ascii values are 256. so I just used an array of size 256.
+    *   assume ascii values as index of an array. Whenever the ascii(index) appears from s1 increase the index's value by one,
+    *   Decrease by one if it appears from s2.
+    *   Then again iterate it the array.If any element !=0 then it's not an anagram.
+    *   T.C : O(n)
+    *   S.C : O(1)
+    * */
     public static boolean isAnagram(String s1, String s2){
 
         if(s1.length() != s2.length())
